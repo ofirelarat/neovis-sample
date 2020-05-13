@@ -9,11 +9,11 @@ function App() {
     
     var config = {
       container_id: "viz",
-      server_url: "bolt://localhost:32768",
+      server_url: "bolt://neo4j-tira-host.apps.ocp4.idf-cts.com:443",
       server_user: "neo4j",
+      server_password: "tira",
       encrypted: "ENCRYPTION_ON",
       trust: "TRUST_ALL_CERTIFICATES",
-      server_password: "admin",
       labels: {
           "PERSON": {
               "caption": "NAME",
@@ -30,6 +30,7 @@ function App() {
               "caption": true
           }
       },
+      arrows: true,
       initial_cypher: "MATCH (n) RETURN n"
     };
 
